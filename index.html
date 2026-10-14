@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bayito (בייטו) – המעבר לדירה החדשה, בלי כאב ראש | Moving home, without the headache</title>
-<meta name="description" content="Bayito guides a move to a new home in Israel: a personal plan, real store prices, budget and mortgage tools, documents and professionals, in Hebrew and English.">
-<meta property="og:title" content="Bayito – Moving home, without the headache">
-<meta property="og:description" content="One app for the whole move: plan, prices, budget, mortgage, documents and professionals.">
+<title>Bayito (בייטו) – כל המעבר. במקום אחד. | Your whole move. In one place.</title>
+<meta name="description" content="Bayito: your whole move to a new home in Israel in one place. A step-by-step plan, documents in order, guides and a smart assistant, budget, mortgage and professionals, in Hebrew and English. Built from a real need, completely free.">
+<meta property="og:title" content="Bayito – Your whole move. In one place.">
+<meta property="og:description" content="I bought an apartment and drowned in paperwork, so I built what I was missing. Plan, documents, guides and a smart assistant, completely free.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://bardamri.github.io/bayito-site/img/og-buyers-he.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0E1530">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 48 48%27%3E%3Crect width=%2748%27 height=%2748%27 rx=%2713%27 fill=%27%232F63F0%27/%3E%3Cpath d=%27M11 23.5 24 12l13 11.5%27 stroke=%27white%27 stroke-width=%273.4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 fill=%27none%27/%3E%3Cpath d=%27m19.6 28.6 3.3 3.3 6-6.4%27 stroke=%27white%27 stroke-width=%273.4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 fill=%27none%27/%3E%3C/svg%3E">
 <style>
@@ -37,11 +39,12 @@ nav.links a{text-decoration:none;opacity:.85}nav.links a:hover{opacity:1}
 /* hero */
 .hero{position:relative;min-height:100vh;color:#fff;background:radial-gradient(1200px 700px at 70% 10%,#2c3f9e 0%,transparent 60%),linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);overflow:hidden;display:flex;align-items:center;padding:110px 0 190px}
 .hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(38px,6vw,72px);letter-spacing:-1.5px}
+.hero h1{font-size:clamp(38px,6vw,72px);letter-spacing:-1.5px;text-wrap:balance}
+h2{text-wrap:balance}
 .hero p.lead{color:#C9D3F5;margin:22px 0 32px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;font-size:14px}
-.chips span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 14px}
+.chips>span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 14px}
 @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding-bottom:230px}}
 canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
 /* skyline scene */
@@ -128,6 +131,18 @@ html.big{font-size:125%}
 .a11y .panel button{border:1px solid #D9DEE7;background:#F4F6FB;border-radius:10px;padding:10px 12px;font:inherit;font-size:15px;cursor:pointer;text-align:start}.a11y .panel button[aria-pressed=true]{background:#2F63F0;color:#fff;border-color:#2F63F0}
 html.calm *{animation:none!important;transition:none!important}html.calm .reveal{opacity:1;transform:none}html.calm canvas#fx{display:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}canvas#fx{display:none}}
+/* the story and the film */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}@media(max-width:900px){.story{grid-template-columns:1fr}}
+.story h2{text-wrap:balance}.story .sign{margin-top:14px;font-weight:800;color:var(--blue)}
+.film{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(14,21,48,.35);background:#0b1630;aspect-ratio:16/9}
+.film video{display:block;width:100%;height:100%}
+/* the audiences */
+.aud{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}@media(max-width:900px){.aud{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.aud{grid-template-columns:1fr}}
+.aud a{display:flex;gap:14px;align-items:center;padding:20px 22px;border-radius:18px;background:#fff;border:1px solid var(--line);text-decoration:none;font-weight:700;transition:transform .25s,box-shadow .25s}
+.aud a:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(30,45,110,.14)}
+.aud a small{display:block;font-weight:500;color:var(--muted);font-size:14px}
+.aud svg{flex:none;width:30px;height:30px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.why .grid{grid-template-columns:repeat(2,1fr)}@media(max-width:600px){.why .grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -152,6 +167,7 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
   <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3zM5 18v2m14-2v2"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-crane" viewBox="0 0 24 24"><path d="M5 21V5l12 0M5 5l4-2M17 5v4M15 9h4v3h-4zM3 21h8"/></symbol>
   <symbol id="i-lang" viewBox="0 0 24 24"><path d="M4 5h9M8.5 3v2M6 5c1 4 3 6 6 7M12 5c-1 4-3 6-6.5 8M13 20l4-9 4 9M14.5 17h5"/></symbol>
 </svg>
 
@@ -164,10 +180,10 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
       Bayito
     </a>
     <nav class="links">
-      <a href="#why"><span class="he" lang="he">למה אנחנו</span><span class="en" lang="en">Why us</span></a>
+      <a href="#story"><span class="he" lang="he">הסיפור</span><span class="en" lang="en">The story</span></a>
+      <a href="#why"><span class="he" lang="he">למה Bayito</span><span class="en" lang="en">Why Bayito</span></a>
       <a href="#features"><span class="he" lang="he">מה יש בפנים</span><span class="en" lang="en">Features</span></a>
-      <a href="#pros"><span class="he" lang="he">לבעלי מקצוע</span><span class="en" lang="en">Professionals</span></a>
-      <a href="#partners"><span class="he" lang="he">שותפים</span><span class="en" lang="en">Partners</span></a>
+      <a href="#business"><span class="he" lang="he">לעסקים</span><span class="en" lang="en">For business</span></a>
       <a href="#contact"><span class="he" lang="he">יצירת קשר</span><span class="en" lang="en">Contact</span></a>
     </nav>
     <button class="lang" id="lang" type="button" aria-label="Language"><span class="he" lang="he">EN</span><span class="en" lang="en">עברית</span></button>
@@ -182,22 +198,22 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
     <div>
       <span class="eyebrow" style="color:#9db6ff"><span class="he" lang="he">האפליקציה למעבר דירה · חינמית לגמרי</span><span class="en" lang="en">The moving-home app · completely free</span></span>
       <h1>
-        <span class="he" lang="he">המעבר לדירה החדשה, <span class="grad">בלי כאב ראש.</span></span>
-        <span class="en" lang="en">Moving home, <span class="grad">without the headache.</span></span>
+        <span class="he" lang="he">כל המעבר. <span class="grad">במקום אחד.</span></span>
+        <span class="en" lang="en">Your whole move. <span class="grad">In one place.</span></span>
       </h1>
       <p class="lead">
-        <span class="he" lang="he">מהחוזה והמשכנתא, דרך המסירה והליקויים, ועד שהבית מאובזר ומתפקד. תוכנית אישית, מחירים אמיתיים מכמה חנויות, תקציב, מסמכים ובעלי מקצוע, הכול במקום אחד, בעברית ובאנגלית.</span>
-        <span class="en" lang="en">From the contract and the mortgage, through handover and defects, to a fully equipped, running home. A personal plan, real prices from several stores, budget, documents and professionals, all in one place, in Hebrew and English.</span>
+        <span class="he" lang="he">תוכנית צעד אחר צעד, כל המסמכים מסודרים, מדריכים ועוזר חכם, תקציב, משכנתא ובעלי מקצוע. מהחוזה ועד שהבית מתפקד, בעברית ובאנגלית. נבנתה מצורך אמיתי, וחינמית לגמרי.</span>
+        <span class="en" lang="en">A step-by-step plan, every document in order, guides and a smart assistant, budget, mortgage and professionals. From the contract to a running home, in Hebrew and English. Built from a real need, and completely free.</span>
       </p>
       <div class="cta-row">
         <a class="btn primary" href="web/" id="cta1"><span class="he" lang="he">פתחו את האפליקציה</span><span class="en" lang="en">Open the app</span></a>
-        <a class="btn ghost" href="#why"><span class="he" lang="he">למה זה שונה?</span><span class="en" lang="en">Why is it different?</span></a>
+        <a class="btn ghost" href="#story"><span class="he" lang="he">הסיפור והסרטון</span><span class="en" lang="en">The story and the film</span></a>
       </div>
       <div class="chips">
         <span><span class="he" lang="he">חינמית לגמרי</span><span class="en" lang="en">Completely free</span></span>
-        <span><span class="he" lang="he">תוכנית אישית</span><span class="en" lang="en">Personal plan</span></span>
-        <span><span class="he" lang="he">השוואת מחירים</span><span class="en" lang="en">Price comparison</span></span>
-        <span><span class="he" lang="he">משכנתא ותקציב</span><span class="en" lang="en">Mortgage & budget</span></span>
+        <span><span class="he" lang="he">הכול במקום אחד</span><span class="en" lang="en">All in one place</span></span>
+        <span><span class="he" lang="he">מדריכים ועוזר חכם</span><span class="en" lang="en">Guides and a smart assistant</span></span>
+        <span><span class="he" lang="he">המסמכים נשארים אצלכם</span><span class="en" lang="en">Your documents stay with you</span></span>
         <span><span class="he" lang="he">הפרטיות בשליטתכם</span><span class="en" lang="en">Your privacy, your choice</span></span>
       </div>
     </div>
@@ -241,13 +257,20 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
   </div>
 </section>
 
-<section id="free" style="padding:70px 0 0">
+<section id="story" style="padding:84px 0 70px">
   <div class="wrap">
-    <div class="band reveal">
-      <span class="eyebrow"><span class="he" lang="he">למה היא חינמית</span><span class="en" lang="en">Why it is free</span></span>
-      <h2><span class="he" lang="he">חינמית לגמרי. נבנתה מתוך צורך אמיתי.</span><span class="en" lang="en">Completely free. Built from a real need.</span></h2>
-      <p class="lead" style="margin-top:14px"><span class="he" lang="he">Bayito נולדה מצורך אישי של מי שבנה אותה: מקום אחד לכל מה שמעבר דירה דורש, במקום קבוצות וואטסאפ, גיליונות ועשרות אתרים. היא חינמית לגמרי, בלי מנוי, בלי תשלום ובלי כרטיס אשראי. המטרה פשוטה: שיהיה לכם קל יותר.</span><span class="en" lang="en">Bayito was born out of its maker's own need: one place for everything a move takes, instead of WhatsApp groups, spreadsheets and dozens of websites. It is completely free, with no subscription, no payment and no credit card. The goal is simple: to make this easier for you.</span></p>
-      <p style="margin-top:14px;font-size:15px"><span class="he" lang="he">בהמשך ייתכן שיתווספו שירותים של שותפים, כמו בנקים ובעלי מקצוע. הם יהיו תמיד בחירה שלכם ולא תנאי לשימוש, ושום מידע לא יועבר אליהם בלי הסכמה שלכם.</span><span class="en" lang="en">Later on, services from partners such as banks and professionals may be added. They will always be your choice, never a condition for using the app, and nothing about you is passed to them without your consent.</span></p>
+    <div class="story">
+      <div class="reveal">
+        <span class="eyebrow"><span class="he" lang="he">הסיפור מאחורי Bayito</span><span class="en" lang="en">The story behind Bayito</span></span>
+        <h2><span class="he" lang="he">קניתי דירה וטבעתי בניירת. אז בניתי את מה שהיה חסר לי.</span><span class="en" lang="en">I bought an apartment and drowned in paperwork. So I built what I was missing.</span></h2>
+        <p class="lead" style="margin-top:16px"><span class="he" lang="he">אני מפתח תוכנה, ומערכות מסובכות הן העבודה שלי. ובכל זאת, כשקניתי דירה טבעתי: חוזה, נסח טאבו, אישור עקרוני, ערבות חוק מכר, הצמדה למדד. כל שבוע עוד טופס, עוד מונח ועוד החלטה על הרבה כסף, ואף אחד לא אמר לי מאיפה מתחילים. אז בניתי את Bayito: מקום אחד לכל המעבר.</span><span class="en" lang="en">I'm a software developer; complicated systems are my job. Even so, when I bought an apartment I drowned: the contract, the land registry extract, the mortgage approval, the Sale Law guarantee, index linkage. Every week another form, another term and another decision about a lot of money, and no one told me where to start. So I built Bayito: one place for the whole move.</span></p>
+        <p class="sign"><span class="he" lang="he">בר דמרי, המפתח של Bayito</span><span class="en" lang="en">Bar Damri, the developer behind Bayito</span></p>
+        <p style="margin-top:18px;font-size:15px;color:var(--muted)"><span class="he" lang="he">Bayito חינמית לגמרי, בלי מנוי, בלי תשלום ובלי כרטיס אשראי. בהמשך ייתכן שיתווספו שירותים של שותפים, כמו בנקים ובעלי מקצוע. הם יהיו תמיד בחירה שלכם ולא תנאי לשימוש, ושום מידע לא יועבר אליהם בלי הסכמה שלכם.</span><span class="en" lang="en">Bayito is completely free, with no subscription, no payment and no credit card. Later on, services from partners such as banks and professionals may be added. They will always be your choice, never a condition for using the app, and nothing about you is passed to them without your consent.</span></p>
+      </div>
+      <div class="film reveal">
+        <video class="he" data-lang="he" controls preload="none" playsinline poster="media/poster-he.jpg" aria-label="סרטון Bayito, 48 שניות, בלי דיבור"><source src="media/bayito-he.mp4" type="video/mp4"></video>
+        <video class="en" data-lang="en" controls preload="none" playsinline poster="media/poster-en.jpg" aria-label="Bayito film, 48 seconds, no speech"><source src="media/bayito-en.mp4" type="video/mp4"></video>
+      </div>
     </div>
   </div>
 </section>
@@ -266,17 +289,19 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
 <section id="why" class="why">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow"><span class="he" lang="he">למה חייבים את זה</span><span class="en" lang="en">Why you need this</span></span>
+      <span class="eyebrow"><span class="he" lang="he">למה Bayito</span><span class="en" lang="en">Why Bayito</span></span>
       <h2><span class="he" lang="he">מעבר דירה הוא <span class="grad" style="background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text">מאות החלטות</span> בשנה אחת</span><span class="en" lang="en">A move is <span class="grad" style="background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text">hundreds of decisions</span> in one year</span></h2>
       <p class="lead" style="margin-top:14px"><span class="he" lang="he">היום כולם מנהלים אותו בין קבוצות וואטסאפ, גיליונות, מיילים ועשרות אתרים. Bayito מחליפה את כל זה באפליקציה אחת שמכירה את הדירה שלכם.</span><span class="en" lang="en">Today people juggle chat groups, spreadsheets, emails and dozens of websites. Bayito replaces all of it with one app that knows your home.</span></p>
     </div>
-    <div class="grid g2">
-      <div class="card reveal"><span class="num">01</span><div><h3><span class="he" lang="he">תוכנית שנבנית לפי הדירה שלכם</span><span class="en" lang="en">A plan built from your home</span></h3><p><span class="he" lang="he">שלוש שאלות (סוג דירה, חדרים, ילדים, חיות, מרפסת וגינה) והרשימה מתאימה את עצמה: רק מה שרלוונטי, לפי שלבי המעבר.</span><span class="en" lang="en">Three questions (type, rooms, kids, pets, balcony, garden) and the list adapts: only what matters to you, in the order the move happens.</span></p></div></div>
-      <div class="card reveal"><span class="num">02</span><div><h3><span class="he" lang="he">מחירים אמיתיים, לא קישורי פרסום</span><span class="en" lang="en">Real prices, not ad links</span></h3><p><span class="he" lang="he">מחירי מוצרים מכמה חנויות ישראליות, באותו דגם, עם סינון לפי מפרט אמיתי (נפח, דלתות, אנרגיה...). אנחנו מכבדים את כללי האתרים ולא עוקפים חסימות.</span><span class="en" lang="en">Product prices from several Israeli stores, for the same model, filtered by real specs. We respect each site's rules and never bypass blocks.</span></p></div></div>
-      <div class="card reveal"><span class="num">03</span><div><h3><span class="he" lang="he">הכסף ברור: תקציב, סל, משכנתא</span><span class="en" lang="en">Money made clear</span></h3><p><span class="he" lang="he">מקורות מימון, תקציב לכל פריט, סל קניות ומעבדת משכנתא להשוואת מסלולים. רואים כמה נשאר, ומה כדאי לדחות.</span><span class="en" lang="en">Funding sources, a budget per item, a shopping basket and a mortgage lab to compare tracks. You see what is left and what can wait.</span></p></div></div>
-      <div class="card reveal"><span class="num">04</span><div><h3><span class="he" lang="he">הנייר מסודר: מסמכים ותבניות</span><span class="en" lang="en">Paperwork, in order</span></h3><p><span class="he" lang="he">פרוטוקול מסירה ודוח ליקויים מובנים (בוחרים חדר, סוג וחומרה במקום לכתוב), מכתבי דרישה, טבלאות השוואה, וארכיון המסמכים שלכם, שנשמר אצלכם במכשיר ולא בשרת.</span><span class="en" lang="en">A structured handover protocol and defects report (pick room, type and severity instead of typing), demand letters, comparison tables and your own document archive, kept on your device and not on a server.</span></p></div></div>
-      <div class="card reveal"><span class="num">05</span><div><h3><span class="he" lang="he">הפרטיות שלכם היא ברירת המחדל</span><span class="en" lang="en">Privacy is the default</span></h3><p><span class="he" lang="he">כל ההסכמות כבויות עד שאתם מדליקים אותן. המידע שלכם חסוי, והקבצים והמסמכים שלכם נשארים אצלכם במכשיר ולא עולים לשרת, אלא אם בחרתם לשלוח אותם לבנק (עותק זמני ומוצפן שנמחק אחרי שבועיים). ייצוא ומחיקה של כל המידע בלחיצה. שיתוף עם בנקים או שותפים נעשה רק באישורכם.</span><span class="en" lang="en">Every consent is off until you switch it on. Your information is confidential, and your files and documents stay on your device and do not go to a server, unless you choose to send them to a bank (a temporary encrypted copy, deleted after two weeks). Export or delete everything in a tap. Sharing with banks or partners happens only with your approval.</span></p></div></div>
-      <div class="card reveal"><span class="num">06</span><div><h3><span class="he" lang="he">נבנתה בעברית, מימין לשמאל</span><span class="en" lang="en">Built Hebrew-first, right to left</span></h3><p><span class="he" lang="he">לא תרגום של אפליקציה זרה: הבירוקרטיה, הבנקים, החנויות והמונחים ישראליים. וכל מסך זמין גם באנגלית, לעולים ולמשפחות מעורבות.</span><span class="en" lang="en">Not a translation of a foreign app: the bureaucracy, banks, stores and terms are Israeli. Every screen is also in English, for new immigrants and mixed families.</span></p></div></div>
+    <div class="grid">
+      <div class="card reveal"><span class="num">01</span><div><h3><span class="he" lang="he">הכול במקום אחד</span><span class="en" lang="en">Everything in one place</span></h3><p><span class="he" lang="he">תוכנית, מסמכים, תקציב, משכנתא, ציוד, בעלי מקצוע ועוזר חכם, במקום קבוצות וואטסאפ, גיליונות ועשרות אתרים.</span><span class="en" lang="en">Plan, documents, budget, mortgage, equipment, professionals and a smart assistant, instead of WhatsApp groups, spreadsheets and dozens of websites.</span></p></div></div>
+      <div class="card reveal"><span class="num">02</span><div><h3><span class="he" lang="he">סדר</span><span class="en" lang="en">Order</span></h3><p><span class="he" lang="he">שלוש שאלות על הדירה, ומקבלים תוכנית צעד אחר צעד לפי שלבי המעבר, עם "הצעד הבא" במסך הבית, יומן ותזכורות.</span><span class="en" lang="en">Three questions about your home, and you get a step-by-step plan in the order the move happens, with "Up next" on the home screen, a calendar and reminders.</span></p></div></div>
+      <div class="card reveal"><span class="num">03</span><div><h3><span class="he" lang="he">נוחות</span><span class="en" lang="en">Convenience</span></h3><p><span class="he" lang="he">בטלפון ובמחשב, בעברית ובאנגלית. מייבאים קבצים, ובטלפון גם משתפים אותם ישר מאפליקציות אחרות אל Bayito.</span><span class="en" lang="en">On your phone and computer, in Hebrew and English. Import files, and on the phone share them straight from other apps into Bayito.</span></p></div></div>
+      <div class="card reveal"><span class="num">04</span><div><h3><span class="he" lang="he">הדרכה ולמידה</span><span class="en" lang="en">Guidance and learning</span></h3><p><span class="he" lang="he">7 מדריכים שלב אחר שלב, וכל מונח מסומן מוסבר בלחיצה. טיפים ועזרה בכל מסך.</span><span class="en" lang="en">7 step-by-step guides, and every marked term explained in a tap. Tips and help on every screen.</span></p></div></div>
+      <div class="card reveal"><span class="num">05</span><div><h3><span class="he" lang="he">התייעצות עם עוזר חכם</span><span class="en" lang="en">Ask a smart assistant</span></h3><p><span class="he" lang="he">שאלות על התוכנית והמסמכים, וניסוח הודעות ומכתבים, בשפה פשוטה. מופעל רק באישור שלכם. כלי עזר, לא ייעוץ.</span><span class="en" lang="en">Questions about your plan and documents, and drafting messages and letters, in plain words. Only on after you agree. A helper, not advice.</span></p></div></div>
+      <div class="card reveal"><span class="num">06</span><div><h3><span class="he" lang="he">פרטיות</span><span class="en" lang="en">Privacy</span></h3><p><span class="he" lang="he">המסמכים נשמרים אצלכם במכשיר ולא בשרת, אלא אם בחרתם לשלוח קובץ לבנק (עותק זמני ומוצפן). כל הסכמה כבויה עד שאתם מדליקים אותה, וייצוא ומחיקה בכל רגע.</span><span class="en" lang="en">Your documents stay on your device and not on a server, unless you choose to send a file to a bank (a temporary encrypted copy). Every consent is off until you switch it on, and you can export or delete everything at any time.</span></p></div></div>
+      <div class="card reveal"><span class="num">07</span><div><h3><span class="he" lang="he">אבטחה</span><span class="en" lang="en">Security</span></h3><p><span class="he" lang="he">בטלפון אפשר לנעול את האפליקציה בזיהוי פנים או טביעת אצבע. החיבור מוצפן, והכניסה שמורה במחזיק המפתחות של הטלפון.</span><span class="en" lang="en">On the phone you can lock the app with Face ID or a fingerprint. The connection is encrypted, and your sign-in is kept in the phone's keychain.</span></p></div></div>
+      <div class="card reveal"><span class="num">08</span><div><h3><span class="he" lang="he">חינם</span><span class="en" lang="en">Free</span></h3><p><span class="he" lang="he">בלי מנוי, בלי תשלום ובלי כרטיס אשראי. נבנתה מצורך אמיתי, כדי שלכם יהיה קל יותר.</span><span class="en" lang="en">No subscription, no payment and no credit card. Built from a real need, to make this easier for you.</span></p></div></div>
     </div>
   </div>
 </section>
@@ -319,45 +344,17 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
   </div>
 </section>
 
-<section id="partners" class="alt">
+<section id="business" class="alt">
   <div class="wrap">
-    <div class="band reveal">
-      <span class="eyebrow"><span class="he" lang="he">לשותפים ולנותני שירות</span><span class="en" lang="en">For partners and service providers</span></span>
-      <h2><span class="he" lang="he">להגיע לאנשים בדיוק ברגע שהם צריכים אתכם</span><span class="en" lang="en">Reach people exactly when they need you</span></h2>
-      <div class="two" style="margin-top:26px">
-        <div>
-          <p><span class="he" lang="he">מעבר דירה הוא אחד הרגעים הכי "יקרים" בחיים: משכנתא, עורך דין, בדק בית, שיפוץ, הובלה, ריהוט. Bayito נמצאת בדיוק בנקודת ההחלטה, ויודעת מה השלב של כל משתמש.</span><span class="en" lang="en">A move is one of the most decision-dense moments in life: mortgage, lawyer, inspection, renovation, moving, furniture. Bayito sits exactly at the decision point and knows each user's stage.</span></p>
-          <p><span class="he" lang="he">שיתוף פרטים הוא רק באישור מפורש של המשתמש, ולכן הפניות איכותיות ומאושרות מראש.</span><span class="en" lang="en">Details are shared only with the user's explicit approval, so referrals are qualified and consented.</span></p>
-        </div>
-        <ul>
-          <li><span class="he" lang="he">מאגר בעלי מקצוע: רישום עצמי, אימות זהות ורישיון, ביקורות של לקוחות אמיתיים</span><span class="en" lang="en">A professionals directory: self-registration, identity and licence verification, reviews by real customers</span></li>
-          <li><span class="he" lang="he">שילוב בשלבי התוכנית (למשל "שכירת עורך דין")</span><span class="en" lang="en">Placed inside plan steps (for example "Hire a lawyer")</span></li>
-          <li><span class="he" lang="he">בנקים: מסלולים מובנים להשוואה הוגנת</span><span class="en" lang="en">Banks: structured tracks for a fair comparison</span></li>
-          <li><span class="he" lang="he">חנויות: מחיר ומפרט שקופים, קישור ישיר לאתר</span><span class="en" lang="en">Stores: transparent price and specs, a direct link to your site</span></li>
-        </ul>
-      </div>
-      <p style="margin-top:22px"><a class="btn primary" href="mailto:bardamri1702@gmail.com?subject=Bayito%20partnership"><span class="he" lang="he">בואו נדבר על שיתוף פעולה</span><span class="en" lang="en">Let's talk partnership</span></a></p>
+    <div class="head reveal"><span class="eyebrow"><span class="he" lang="he">Bayito לעסקים</span><span class="en" lang="en">Bayito for business</span></span><h2><span class="he" lang="he">גם בשביל מי שעוזר לאנשים לעבור דירה</span><span class="en" lang="en">Also for everyone who helps people move</span></h2>
+      <p class="lead" style="margin-top:14px"><span class="he" lang="he">בעלי מקצוע, בנקים, רשתות ויזמים פוגשים ב-Bayito אנשים בדיוק ברגע שהם צריכים אותם, ותמיד רק בהסכמה שלהם. אנחנו לא מוכרים מידע.</span><span class="en" lang="en">Professionals, banks, retailers and developers meet people in Bayito exactly when they need them, and always only with their consent. We don't sell data.</span></p></div>
+    <div class="aud reveal">
+      <a href="pros.html"><svg><use href="#i-hammer"/></svg><span><span class="he" lang="he">בעלי מקצוע ונותני שירות</span><span class="en" lang="en">Professionals and service providers</span><small><span class="he" lang="he">רישום חינם, סימון מאומת ופניות בהסכמה</span><span class="en" lang="en">Free listing, a verified mark, consented requests</span></small></span></a>
+      <a href="banks.html"><svg><use href="#i-bank"/></svg><span><span class="he" lang="he">בנקים ויועצי משכנתאות</span><span class="en" lang="en">Banks and mortgage advisors</span><small><span class="he" lang="he">הלקוח ברגע ההחלטה, מוכן ובהסכמה</span><span class="en" lang="en">The customer at the moment of decision</span></small></span></a>
+      <a href="retail.html"><svg><use href="#i-cart"/></svg><span><span class="he" lang="he">רשתות חשמל, ריהוט ומוצרי בית</span><span class="en" lang="en">Electronics, furniture and home goods</span><small><span class="he" lang="he">להיות שם כשהבית החדש מתמלא</span><span class="en" lang="en">Be there when the new home fills up</span></small></span></a>
+      <a href="developers.html"><svg><use href="#i-crane"/></svg><span><span class="he" lang="he">יזמים וחברות בנייה</span><span class="en" lang="en">Developers and construction companies</span><small><span class="he" lang="he">רוכשים מוכנים, מסירה רגועה</span><span class="en" lang="en">Prepared buyers, calmer handovers</span></small></span></a>
+      <a href="investors.html"><svg><use href="#i-chart"/></svg><span><span class="he" lang="he">משקיעים</span><span class="en" lang="en">Investors</span><small><span class="he" lang="he">המוצר, ולאן הוא הולך</span><span class="en" lang="en">The product, and where it is going</span></small></span></a>
     </div>
-  </div>
-</section>
-
-<section id="pros">
-  <div class="wrap">
-    <div class="head reveal"><span class="eyebrow"><span class="he" lang="he">לבעלי מקצוע</span><span class="en" lang="en">For professionals</span></span><h2><span class="he" lang="he">הלקוחות הבאים שלכם כבר מתכננים את המעבר</span><span class="en" lang="en">Your next customers are already planning their move</span></h2></div>
-    <div class="two">
-      <div>
-        <p><span class="he" lang="he">מי שקונה דירה, עובר או משפץ צריך בחודשים האלה עורך דין, בדק בית, חשמלאי, צבעי, מובילים, מתקין מזגנים, מנקה ועוד עשרות מקצועות. ב-Bayito הם מחפשים לפי נושא ותת-נושא ולפי אזור, ופונים מתוך האפליקציה.</span><span class="en" lang="en">Someone buying, moving or renovating needs, within a few months, a lawyer, a home inspector, an electrician, a painter, movers, an AC installer, a cleaner and dozens more trades. In Bayito they search by topic, subtopic and area, and send a request from the app.</span></p>
-        <p><span class="he" lang="he">הרישום חינם. אחרי אימות זהות, פרטי העסק ורישיון (כשהמקצוע דורש) מופיע ליד השם שלכם סימון "מאומת", ורק לקוחות שיצרו איתכם קשר דרך האפליקציה יכולים לדרג. ביקורות טובות מקדמות אתכם ברשימה.</span><span class="en" lang="en">Listing is free. After verification of identity, business details and licence (where the trade requires one), a "verified" mark appears by your name, and only customers who contacted you through the app can rate you. Good reviews move you up the list.</span></p>
-      </div>
-      <ul>
-        <li><span class="he" lang="he">מאות תתי-נושאים ב-50 תחומים, ואפשר להציע נושא שחסר</span><span class="en" lang="en">Hundreds of subtopics across 50 topics, and you can propose one that is missing</span></li>
-        <li><span class="he" lang="he">אזורי שירות: אזורים שלמים או ערים מרשימת היישובים הרשמית</span><span class="en" lang="en">Service areas: whole regions or cities from the official settlements list</span></li>
-        <li><span class="he" lang="he">פניות עם פרטי הלקוח, רק בהסכמתו, ישירות לאזור שלכם</span><span class="en" lang="en">Requests with the customer's details, only with their consent, straight to your area</span></li>
-        <li><span class="he" lang="he">דירוג לפי איכות, זמנים ותמורה; תגובה לכל ביקורת; דיווח על ביקורת שלא במקום</span><span class="en" lang="en">Scores for quality, timing and value; a reply to every review; a way to report an unfair one</span></li>
-        <li><span class="he" lang="he">המסמכים שלכם מוצפנים ונמחקים מיד אחרי האימות</span><span class="en" lang="en">Your documents are encrypted and deleted right after verification</span></li>
-      </ul>
-    </div>
-    <p style="margin-top:22px"><a class="btn primary" href="web/?go=pro"><span class="he" lang="he">הצטרפו כבעלי מקצוע</span><span class="en" lang="en">Join as a professional</span></a> <a class="btn" href="mailto:bardamri1702@gmail.com?subject=Bayito%20professionals" style="margin-inline-start:10px"><span class="he" lang="he">שאלות? כתבו לנו</span><span class="en" lang="en">Questions? Write to us</span></a></p>
   </div>
 </section>
 
@@ -366,6 +363,7 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
     <div class="trust reveal">
       <span><svg><use href="#i-lock"/></svg><span class="he" lang="he">הקבצים נשארים אצלכם, ורק אתם מחליטים מה נשלח</span><span class="en" lang="en">Your files stay with you, and only you decide what is sent</span></span>
       <span><svg><use href="#i-shield"/></svg><span class="he" lang="he">הסכמות כבויות כברירת מחדל</span><span class="en" lang="en">Consents off by default</span></span>
+      <span><svg><use href="#i-key"/></svg><span class="he" lang="he">נעילה בזיהוי פנים או טביעת אצבע</span><span class="en" lang="en">Face ID or fingerprint lock</span></span>
       <span><svg><use href="#i-doc"/></svg><span class="he" lang="he">ייצוא ומחיקה של כל המידע</span><span class="en" lang="en">Export and delete everything</span></span>
       <span><svg><use href="#i-lang"/></svg><span class="he" lang="he">עברית ואנגלית</span><span class="en" lang="en">Hebrew and English</span></span>
     </div>
@@ -393,6 +391,10 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
       <a href="data-deletion.html"><span class="he" lang="he">מחיקת נתונים</span><span class="en" lang="en">Data deletion</span></a>
       <a href="accessibility.html"><span class="he" lang="he">הצהרת נגישות</span><span class="en" lang="en">Accessibility</span></a>
       <a href="about.html"><span class="he" lang="he">קישורים</span><span class="en" lang="en">Links</span></a>
+      <a href="pros.html"><span class="he" lang="he">לבעלי מקצוע</span><span class="en" lang="en">For professionals</span></a>
+      <a href="banks.html"><span class="he" lang="he">לבנקים</span><span class="en" lang="en">For banks</span></a>
+      <a href="retail.html"><span class="he" lang="he">לרשתות</span><span class="en" lang="en">For retailers</span></a>
+      <a href="developers.html"><span class="he" lang="he">ליזמים</span><span class="en" lang="en">For developers</span></a>
       <a href="investors.html"><span class="he" lang="he">למשקיעים</span><span class="en" lang="en">For investors</span></a>
     </div>
   </div>
@@ -423,12 +425,14 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
 
   // Language: the visitor's choice, else the browser's.
   var saved = null; try { saved = localStorage.getItem('hf-lang'); } catch (e) {}
+  var asked = (new URLSearchParams(location.search).get('lang') || '').slice(0, 2);
   function setLang(l) {
     root.classList.toggle('is-en', l === 'en');
     root.lang = l; root.dir = l === 'en' ? 'ltr' : 'rtl';
+    document.querySelectorAll('video[data-lang]').forEach(function (v) { if (v.getAttribute('data-lang') !== l && !v.paused) v.pause(); });
     try { localStorage.setItem('hf-lang', l); } catch (e) {}
   }
-  setLang(saved || ((navigator.language || 'he').slice(0, 2) === 'he' ? 'he' : 'en'));
+  setLang(asked === 'he' || asked === 'en' ? asked : saved || ((navigator.language || 'he').slice(0, 2) === 'he' ? 'he' : 'en'));
   document.getElementById('lang').addEventListener('click', function () { setLang(root.classList.contains('is-en') ? 'he' : 'en'); });
 
   // Windows of the skyline, lit at random.
