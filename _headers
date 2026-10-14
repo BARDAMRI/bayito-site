@@ -1,0 +1,6 @@
+# Cloudflare Pages response headers (GitHub Pages ignores this file).
+# no-transform: Cloudflare must serve the pages exactly as published. Without it, it injects its own Web Analytics script (static.cloudflareinsights.com)
+# into every page of a free domain, which the privacy policy does not describe. must-revalidate with max-age=0: a browser asks again on each visit and gets
+# a quick "not modified" answer, so a new version is seen at once.
+/*
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
