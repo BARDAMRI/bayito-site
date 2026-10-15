@@ -15,7 +15,7 @@
 :root{--blue:#2F63F0;--violet:#5B3FE0;--navy:#0E1530;--navy2:#1B2A6B;--ink:#161B26;--muted:#5B6475;--line:#E3E7EF;--soft:#F4F6FB;--amber:#FFB547;--green:#20C997;--card:#fff;--radius:20px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font:17px/1.65 system-ui,-apple-system,"Segoe UI",Heebo,Arial,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
-html:not(.is-en) .en{display:none!important}html.is-en .he{display:none!important}
+html:not([lang=he]) .he,html:not([lang=en]) .en,html:not([lang=ru]) .ru,html:not([lang=ar]) .ar{display:none!important}html[lang=ar] body{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Arabic","Geeza Pro",Tahoma,Arial,sans-serif}select.lang{appearance:none;-webkit-appearance:none}select.lang option{color:#161B26;background:#fff}
 a{color:inherit}img,svg{max-width:100%}
 .wrap{width:min(1120px,92vw);margin-inline:auto}
 h1,h2,h3{line-height:1.2;margin:0}
@@ -132,7 +132,7 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
 </style>
 </head>
 <body>
-<a class="skip" href="#main"><span class="he" lang="he">דילוג לתוכן</span><span class="en" lang="en">Skip to content</span></a>
+<a class="skip" href="#main"><span class="he" lang="he">דילוג לתוכן</span><span class="en" lang="en">Skip to content</span><span class="ru" lang="ru">Перейти к содержимому</span><span class="ar" lang="ar">تخطَّ إلى المحتوى</span></a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></symbol>
   <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 8-8m-3 3 3 3m-6-1 2 2"/></symbol>
@@ -164,46 +164,46 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
       <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F63F0"/><stop offset="1" stop-color="#5B3FE0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#lg)"/><path d="M11 23.5 24 12l13 11.5" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M15.5 22.5V35a1.5 1.5 0 0 0 1.5 1.5h14a1.5 1.5 0 0 0 1.5-1.5V22.5" stroke="#fff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="m19.6 28.6 3.3 3.3 6-6.4" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
       Bayito
     </a>
-    <nav class="links" aria-label="Bayito for">
-      <a href="index.html"><span class="he" lang="he">רוכשי דירות</span><span class="en" lang="en">Home buyers</span></a>
-      <a href="pros.html"><span class="he" lang="he">בעלי מקצוע</span><span class="en" lang="en">Professionals</span></a>
-      <a href="banks.html"><span class="he" lang="he">בנקים</span><span class="en" lang="en">Banks</span></a>
-      <a href="retail.html"><span class="he" lang="he">רשתות</span><span class="en" lang="en">Retailers</span></a>
-      <a href="developers.html"><span class="he" lang="he">יזמים</span><span class="en" lang="en">Developers</span></a>
-      <a href="investors.html" aria-current="page"><span class="he" lang="he">משקיעים</span><span class="en" lang="en">Investors</span></a>
+    <nav class="links" aria-label="Bayito for" data-aria='{"he": "Bayito עבור", "en": "Bayito for", "ru": "Bayito для", "ar": "Bayito لـ"}'>
+      <a href="index.html"><span class="he" lang="he">רוכשי דירות</span><span class="en" lang="en">Home buyers</span><span class="ru" lang="ru">Покупатели жилья</span><span class="ar" lang="ar">مشترو البيوت</span></a>
+      <a href="pros.html"><span class="he" lang="he">בעלי מקצוע</span><span class="en" lang="en">Professionals</span><span class="ru" lang="ru">Специалисты</span><span class="ar" lang="ar">المهنيون</span></a>
+      <a href="banks.html"><span class="he" lang="he">בנקים</span><span class="en" lang="en">Banks</span><span class="ru" lang="ru">Банки</span><span class="ar" lang="ar">البنوك</span></a>
+      <a href="retail.html"><span class="he" lang="he">רשתות</span><span class="en" lang="en">Retailers</span><span class="ru" lang="ru">Магазины</span><span class="ar" lang="ar">المتاجر</span></a>
+      <a href="developers.html"><span class="he" lang="he">יזמים</span><span class="en" lang="en">Developers</span><span class="ru" lang="ru">Застройщики</span><span class="ar" lang="ar">المقاولون</span></a>
+      <a href="investors.html" aria-current="page"><span class="he" lang="he">משקיעים</span><span class="en" lang="en">Investors</span><span class="ru" lang="ru">Инвесторы</span><span class="ar" lang="ar">المستثمرون</span></a>
     </nav>
-    <button class="lang" id="lang" type="button" aria-label="Language"><span class="he" lang="he">EN</span><span class="en" lang="en">עברית</span></button>
-    <a class="btn primary sm" href="web/"><span class="he" lang="he">לנסות עכשיו</span><span class="en" lang="en">Try it now</span></a>
+    <select class="lang" id="lang" aria-label="Language / שפה / Язык / اللغة"><option value="he" lang="he">עברית</option><option value="en" lang="en">English</option><option value="ru" lang="ru">Русский</option><option value="ar" lang="ar">العربية</option></select>
+    <a class="btn primary sm" href="web/"><span class="he" lang="he">לנסות עכשיו</span><span class="en" lang="en">Try it now</span><span class="ru" lang="ru">Попробовать</span><span class="ar" lang="ar">جرّب الآن</span></a>
   </div>
 </header>
 
 <main id="main">
 <section id="investors" style="padding-top:120px">
   <div class="wrap">
-    <div class="head reveal"><span class="eyebrow"><span class="he" lang="he">למשקיעים</span><span class="en" lang="en">For investors</span></span><h2><span class="he" lang="he">מוצר ויאגרגטור של רגע החיים הגדול ביותר</span><span class="en" lang="en">The product layer for life's biggest purchase moment</span></h2></div>
+    <div class="head reveal"><span class="eyebrow"><span class="he" lang="he">למשקיעים</span><span class="en" lang="en">For investors</span><span class="ru" lang="ru">Для инвесторов</span><span class="ar" lang="ar">للمستثمرين</span></span><h2><span class="he" lang="he">מוצר ויאגרגטור של רגע החיים הגדול ביותר</span><span class="en" lang="en">The product layer for life's biggest purchase moment</span><span class="ru" lang="ru">Продуктовый слой для самой крупной покупки в жизни</span><span class="ar" lang="ar">طبقة المنتج لأكبر لحظة شراء في الحياة</span></h2></div>
     <div class="grid g3">
-      <div class="card reveal"><h3><span class="he" lang="he">רגע בעל כוונה גבוהה</span><span class="en" lang="en">A high-intent moment</span></h3><p><span class="he" lang="he">אדם עובר דירה פעם בכמה שנים, ובתוך כמה חודשים מקבל עשרות החלטות כספיות. מי שמלווה את התוכנית מחזיק בקשר איכותי.</span><span class="en" lang="en">People move once in years, and make dozens of financial decisions within months. Whoever guides the plan holds a high-quality relationship.</span></p></div>
-      <div class="card reveal"><h3><span class="he" lang="he">יתרון: ידע מובנה בעברית</span><span class="en" lang="en">Edge: structured Hebrew knowledge</span></h3><p><span class="he" lang="he">מאות צעדים, מדריכים, תבניות וטיפים מקומיים, שנבנו כנתונים (לא כטקסט חופשי) ולכן ניתנים להשוואה, התאמה ושימוש חוזר.</span><span class="en" lang="en">Hundreds of steps, guides, templates and local tips, built as data (not free text), so they can be compared, personalised and reused.</span></p></div>
-      <div class="card reveal"><h3><span class="he" lang="he">מודל פרטיות מחמיר</span><span class="en" lang="en">Privacy as a moat</span></h3><p><span class="he" lang="he">הסכמות כבויות כברירת מחדל, מסמכים שנשארים אצל המשתמש, ייצוא ומחיקה. אמון הוא מה שמאפשר שיתוף נתונים בהסכמה עם בנקים ונותני שירות.</span><span class="en" lang="en">Consents off by default, documents that stay with the user, export and deletion. Trust is what makes consented data sharing with banks and providers possible.</span></p></div>
+      <div class="card reveal"><h3><span class="he" lang="he">רגע בעל כוונה גבוהה</span><span class="en" lang="en">A high-intent moment</span><span class="ru" lang="ru">Момент высокой заинтересованности</span><span class="ar" lang="ar">لحظة نيّة عالية</span></h3><p><span class="he" lang="he">אדם עובר דירה פעם בכמה שנים, ובתוך כמה חודשים מקבל עשרות החלטות כספיות. מי שמלווה את התוכנית מחזיק בקשר איכותי.</span><span class="en" lang="en">People move once in years, and make dozens of financial decisions within months. Whoever guides the plan holds a high-quality relationship.</span><span class="ru" lang="ru">Люди переезжают раз в несколько лет и за несколько месяцев принимают десятки финансовых решений. Тот, кто ведёт план, получает отношения высокого качества.</span><span class="ar" lang="ar">ينتقل الناس مرة كل بضع سنوات، ويتّخذون عشرات القرارات المالية خلال أشهر. من يرافق الخطة يملك علاقة عالية الجودة.</span></p></div>
+      <div class="card reveal"><h3><span class="he" lang="he">יתרון: ידע מובנה בעברית</span><span class="en" lang="en">Edge: structured Hebrew knowledge</span><span class="ru" lang="ru">Преимущество: структурированные знания на иврите</span><span class="ar" lang="ar">الميزة: معرفة منظّمة بالعبرية</span></h3><p><span class="he" lang="he">מאות צעדים, מדריכים, תבניות וטיפים מקומיים, שנבנו כנתונים (לא כטקסט חופשי) ולכן ניתנים להשוואה, התאמה ושימוש חוזר.</span><span class="en" lang="en">Hundreds of steps, guides, templates and local tips, built as data (not free text), so they can be compared, personalised and reused.</span><span class="ru" lang="ru">Сотни шагов, руководств, шаблонов и местных советов, построенных как данные (а не свободный текст), — их можно сравнивать, персонализировать и использовать повторно.</span><span class="ar" lang="ar">مئات الخطوات والأدلّة والقوالب والنصائح المحلية، مبنية كبيانات (لا نصًا حرًّا)، لتُقارن وتُخصَّص وتُستخدم مجددًا.</span></p></div>
+      <div class="card reveal"><h3><span class="he" lang="he">מודל פרטיות מחמיר</span><span class="en" lang="en">Privacy as a moat</span><span class="ru" lang="ru">Приватность как защитный ров</span><span class="ar" lang="ar">الخصوصية كخندق حماية</span></h3><p><span class="he" lang="he">הסכמות כבויות כברירת מחדל, מסמכים שנשארים אצל המשתמש, ייצוא ומחיקה. אמון הוא מה שמאפשר שיתוף נתונים בהסכמה עם בנקים ונותני שירות.</span><span class="en" lang="en">Consents off by default, documents that stay with the user, export and deletion. Trust is what makes consented data sharing with banks and providers possible.</span><span class="ru" lang="ru">Согласия выключены по умолчанию, документы остаются у пользователя, экспорт и удаление. Именно доверие делает возможным обмен данными с банками и поставщиками с согласия.</span><span class="ar" lang="ar">موافقات مطفأة افتراضيًا، مستندات تبقى مع المستخدم، تصدير وحذف. الثقة هي ما يجعل مشاركة البيانات بالموافقة مع البنوك والمزوّدين ممكنة.</span></p></div>
     </div>
     <div class="two reveal" style="margin-top:34px;align-items:center" id="film">
-      <div><h3 style="font-size:26px;margin-bottom:10px"><span class="he" lang="he">"קניתי דירה וטבעתי בניירת. אז בניתי את מה שהיה חסר לי."</span><span class="en" lang="en">"I bought an apartment and drowned in paperwork. So I built what I was missing."</span></h3><p style="color:var(--muted);margin:0"><span class="he" lang="he">בר דמרי, המפתח של Bayito. הסרטון (48 שניות, בלי דיבור) מראה את המוצר כפי שהוא היום.</span><span class="en" lang="en">Bar Damri, the developer behind Bayito. The film (48 seconds, no speech) shows the product as it is today.</span></p></div>
-      <div style="border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(14,21,48,.3);aspect-ratio:16/9;background:#0b1630"><video class="he" data-lang="he" controls preload="none" playsinline poster="media/poster-he.jpg" style="display:block;width:100%;height:100%"><source src="media/bayito-he.mp4" type="video/mp4"></video><video class="en" data-lang="en" controls preload="none" playsinline poster="media/poster-en.jpg" style="display:block;width:100%;height:100%"><source src="media/bayito-en.mp4" type="video/mp4"></video></div>
+      <div><h3 style="font-size:26px;margin-bottom:10px"><span class="he" lang="he">"קניתי דירה וטבעתי בניירת. אז בניתי את מה שהיה חסר לי."</span><span class="en" lang="en">"I bought an apartment and drowned in paperwork. So I built what I was missing."</span><span class="ru" lang="ru">«Покупка квартиры обернулась морем бумаг. Поэтому появилось то, чего мне не хватало».</span><span class="ar" lang="ar">"اشتريت شقة وغرقت في الأوراق. فبنيت ما كان ينقصني."</span></h3><p style="color:var(--muted);margin:0"><span class="he" lang="he">בר דמרי, המפתח של Bayito. הסרטון (48 שניות, בלי דיבור) מראה את המוצר כפי שהוא היום.</span><span class="en" lang="en">Bar Damri, the developer behind Bayito. The film (48 seconds, no speech) shows the product as it is today.</span><span class="ru" lang="ru">Бар Дамри, разработчик Bayito. Фильм (48 секунд, без речи) показывает продукт таким, какой он сегодня.</span><span class="ar" lang="ar">بار دمري، مطوّر Bayito. الفيلم (48 ثانية، بلا كلام) يعرض المنتج كما هو اليوم.</span></p></div>
+      <div style="border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(14,21,48,.3);aspect-ratio:16/9;background:#0b1630"><video class="he" data-lang="he" controls preload="none" playsinline poster="media/poster-he.jpg" style="display:block;width:100%;height:100%"><source src="media/bayito-he.mp4" type="video/mp4"></video><video class="en" data-lang="en" controls preload="none" playsinline poster="media/poster-en.jpg" style="display:block;width:100%;height:100%"><source src="media/bayito-en.mp4" type="video/mp4"></video><video class="ru" data-lang="ru" controls preload="none" playsinline poster="media/poster-ru.jpg" style="display:block;width:100%;height:100%"><source src="media/bayito-ru.mp4" type="video/mp4"></video><video class="ar" data-lang="ar" controls preload="none" playsinline poster="media/poster-ar.jpg" style="display:block;width:100%;height:100%"><source src="media/bayito-ar.mp4" type="video/mp4"></video></div>
     </div>
     <div class="band reveal" style="margin-top:34px">
-      <span class="eyebrow"><span class="he" lang="he">איפה אנחנו ולאן</span><span class="en" lang="en">Where we are, where we go</span></span>
+      <span class="eyebrow"><span class="he" lang="he">איפה אנחנו ולאן</span><span class="en" lang="en">Where we are, where we go</span><span class="ru" lang="ru">Где мы сейчас и куда идём</span><span class="ar" lang="ar">أين نحن، وإلى أين نتّجه</span></span>
       <div class="two">
         <div>
-          <h3 style="margin-bottom:10px"><span class="he" lang="he">היום</span><span class="en" lang="en">Today</span></h3>
-          <ul><li><span class="he" lang="he">מוצר עובד באינטרנט, בעברית ובאנגלית, בבדיקות</span><span class="en" lang="en">A working web product, in Hebrew and English, in testing</span></li><li><span class="he" lang="he">שרת ובסיס נתונים, כניסה עם Google ו-Facebook, מסמכים מוצפנים</span><span class="en" lang="en">Server and database, Google and Facebook sign-in, encrypted documents</span></li><li><span class="he" lang="he">נתוני מחירים מכמה חנויות, מעבדת משכנתא, תקציב, תבניות</span><span class="en" lang="en">Prices from several stores, mortgage lab, budget, templates</span></li></ul>
+          <h3 style="margin-bottom:10px"><span class="he" lang="he">היום</span><span class="en" lang="en">Today</span><span class="ru" lang="ru">Сегодня</span><span class="ar" lang="ar">اليوم</span></h3>
+          <ul><li><span class="he" lang="he">מוצר עובד באינטרנט, בארבע שפות, בבדיקות</span><span class="en" lang="en">A working web product, in four languages, in testing</span><span class="ru" lang="ru">Рабочий веб-продукт на четырёх языках, в тестировании</span><span class="ar" lang="ar">منتج ويب يعمل، بأربع لغات، قيد التجربة</span></li><li><span class="he" lang="he">שרת ובסיס נתונים, כניסה עם Google ו-Facebook, מסמכים מוצפנים</span><span class="en" lang="en">Server and database, Google and Facebook sign-in, encrypted documents</span><span class="ru" lang="ru">Сервер и база данных, вход через Google и Facebook, зашифрованные документы</span><span class="ar" lang="ar">خادم وقاعدة بيانات، دخول عبر Google وFacebook، مستندات مشفّرة</span></li><li><span class="he" lang="he">נתוני מחירים מכמה חנויות, מעבדת משכנתא, תקציב, תבניות</span><span class="en" lang="en">Prices from several stores, mortgage lab, budget, templates</span><span class="ru" lang="ru">Цены из нескольких магазинов, ипотечная лаборатория, бюджет, шаблоны</span><span class="ar" lang="ar">أسعار من عدة متاجر، مختبر رهن، ميزانية، قوالب</span></li></ul>
         </div>
         <div>
-          <h3 style="margin-bottom:10px"><span class="he" lang="he">כיוונים מתוכננים</span><span class="en" lang="en">Planned directions</span></h3>
-          <ul><li><span class="he" lang="he">אפליקציות iOS ו-Android</span><span class="en" lang="en">iOS and Android apps</span></li><li><span class="he" lang="he">אינטגרציה עם בנקים והפניות בהסכמה</span><span class="en" lang="en">Bank integrations and consented referrals</span></li><li><span class="he" lang="he">שוק בעלי מקצוע ושותפויות עם יזמים וקבלנים</span><span class="en" lang="en">A professionals marketplace and partnerships with developers</span></li><li><span class="he" lang="he">ניהול הבית השוטף אחרי המעבר</span><span class="en" lang="en">Ongoing home management after the move</span></li></ul>
+          <h3 style="margin-bottom:10px"><span class="he" lang="he">כיוונים מתוכננים</span><span class="en" lang="en">Planned directions</span><span class="ru" lang="ru">Планируемые направления</span><span class="ar" lang="ar">اتجاهات مخطّطة</span></h3>
+          <ul><li><span class="he" lang="he">אפליקציות iOS ו-Android</span><span class="en" lang="en">iOS and Android apps</span><span class="ru" lang="ru">Приложения для iOS и Android</span><span class="ar" lang="ar">تطبيقات iOS وAndroid</span></li><li><span class="he" lang="he">אינטגרציה עם בנקים והפניות בהסכמה</span><span class="en" lang="en">Bank integrations and consented referrals</span><span class="ru" lang="ru">Интеграции с банками и направления с согласия</span><span class="ar" lang="ar">ربط مع البنوك وإحالات بالموافقة</span></li><li><span class="he" lang="he">שוק בעלי מקצוע ושותפויות עם יזמים וקבלנים</span><span class="en" lang="en">A professionals marketplace and partnerships with developers</span><span class="ru" lang="ru">Маркетплейс специалистов и партнёрство с застройщиками</span><span class="ar" lang="ar">سوق للمهنيين وشراكات مع المقاولين</span></li><li><span class="he" lang="he">ניהול הבית השוטף אחרי המעבר</span><span class="en" lang="en">Ongoing home management after the move</span><span class="ru" lang="ru">Текущее управление домом после переезда</span><span class="ar" lang="ar">إدارة البيت المستمرة بعد الانتقال</span></li></ul>
         </div>
       </div>
-      <p style="margin-top:20px;font-size:15px"><span class="he" lang="he">אין כאן נתוני צמיחה או הכנסות: המוצר בשלב בדיקות. נשמח להציג הדגמה ולשוחח על תוכנית העבודה.</span><span class="en" lang="en">There are no growth or revenue figures here: the product is in testing. We would be glad to give a walkthrough and discuss the plan.</span></p>
-      <p><a class="btn primary" href="mailto:bardamri1702@gmail.com?subject=Bayito%20investors"><span class="he" lang="he">לקבוע הדגמה</span><span class="en" lang="en">Book a walkthrough</span></a></p>
+      <p style="margin-top:20px;font-size:15px"><span class="he" lang="he">אין כאן נתוני צמיחה או הכנסות: המוצר בשלב בדיקות. נשמח להציג הדגמה ולשוחח על תוכנית העבודה.</span><span class="en" lang="en">There are no growth or revenue figures here: the product is in testing. We would be glad to give a walkthrough and discuss the plan.</span><span class="ru" lang="ru">Здесь нет цифр роста или выручки: продукт в тестировании. Будем рады показать его и обсудить план.</span><span class="ar" lang="ar">لا توجد هنا أرقام نمو أو إيرادات: المنتج قيد التجربة. يسعدنا أن نعرضه ونناقش الخطة.</span></p>
+      <p><a class="btn primary" href="mailto:bardamri1702@gmail.com?subject=Bayito%20investors"><span class="he" lang="he">לקבוע הדגמה</span><span class="en" lang="en">Book a walkthrough</span><span class="ru" lang="ru">Записаться на демонстрацию</span><span class="ar" lang="ar">احجز جولة</span></a></p>
     </div>
   </div>
 </section>
@@ -211,26 +211,26 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Bayito. <span class="he" lang="he">כל הזכויות שמורות.</span><span class="en" lang="en">All rights reserved.</span></div>
+    <div>© 2026 Bayito. <span class="he" lang="he">כל הזכויות שמורות.</span><span class="en" lang="en">All rights reserved.</span><span class="ru" lang="ru">Все права защищены.</span><span class="ar" lang="ar">جميع الحقوق محفوظة.</span></div>
     <div>
-      <a href="terms.html"><span class="he" lang="he">תנאי שימוש</span><span class="en" lang="en">Terms of use</span></a>
-      <a href="privacy.html"><span class="he" lang="he">מדיניות פרטיות</span><span class="en" lang="en">Privacy policy</span></a>
-      <a href="data-deletion.html"><span class="he" lang="he">מחיקת נתונים</span><span class="en" lang="en">Data deletion</span></a>
-      <a href="accessibility.html"><span class="he" lang="he">הצהרת נגישות</span><span class="en" lang="en">Accessibility</span></a>
-      <a href="about.html"><span class="he" lang="he">קישורים</span><span class="en" lang="en">Links</span></a>
-      <a href="index.html"><span class="he" lang="he">לדף הבית</span><span class="en" lang="en">Home page</span></a>
+      <a href="terms.html"><span class="he" lang="he">תנאי שימוש</span><span class="en" lang="en">Terms of use</span><span class="ru" lang="ru">Условия использования</span><span class="ar" lang="ar">شروط الاستخدام</span></a>
+      <a href="privacy.html"><span class="he" lang="he">מדיניות פרטיות</span><span class="en" lang="en">Privacy policy</span><span class="ru" lang="ru">Политика конфиденциальности</span><span class="ar" lang="ar">سياسة الخصوصية</span></a>
+      <a href="data-deletion.html"><span class="he" lang="he">מחיקת נתונים</span><span class="en" lang="en">Data deletion</span><span class="ru" lang="ru">Удаление данных</span><span class="ar" lang="ar">حذف البيانات</span></a>
+      <a href="accessibility.html"><span class="he" lang="he">הצהרת נגישות</span><span class="en" lang="en">Accessibility</span><span class="ru" lang="ru">Доступность</span><span class="ar" lang="ar">إتاحة الوصول</span></a>
+      <a href="about.html"><span class="he" lang="he">קישורים</span><span class="en" lang="en">Links</span><span class="ru" lang="ru">Ссылки</span><span class="ar" lang="ar">روابط</span></a>
+      <a href="index.html"><span class="he" lang="he">לדף הבית</span><span class="en" lang="en">Home page</span><span class="ru" lang="ru">Главная</span><span class="ar" lang="ar">الصفحة الرئيسية</span></a>
     </div>
   </div>
 </footer>
 
 <div class="a11y" id="a11y">
-  <div class="panel" id="a11y-panel" role="group" aria-label="Accessibility">
-    <button type="button" data-a="big" aria-pressed="false"><span class="he" lang="he">הגדלת טקסט</span><span class="en" lang="en">Larger text</span></button>
-    <button type="button" data-a="hc" aria-pressed="false"><span class="he" lang="he">ניגודיות גבוהה</span><span class="en" lang="en">High contrast</span></button>
-    <button type="button" data-a="calm" aria-pressed="false"><span class="he" lang="he">בלי אנימציות</span><span class="en" lang="en">No animation</span></button>
-    <a href="accessibility.html" style="padding:6px 12px"><span class="he" lang="he">הצהרת נגישות</span><span class="en" lang="en">Accessibility statement</span></a>
+  <div class="panel" id="a11y-panel" role="group" aria-label="Accessibility" data-aria='{"he": "נגישות", "en": "Accessibility", "ru": "Доступность", "ar": "إتاحة الوصول"}'>
+    <button type="button" data-a="big" aria-pressed="false"><span class="he" lang="he">הגדלת טקסט</span><span class="en" lang="en">Larger text</span><span class="ru" lang="ru">Крупный текст</span><span class="ar" lang="ar">نص أكبر</span></button>
+    <button type="button" data-a="hc" aria-pressed="false"><span class="he" lang="he">ניגודיות גבוהה</span><span class="en" lang="en">High contrast</span><span class="ru" lang="ru">Высокий контраст</span><span class="ar" lang="ar">تباين عالٍ</span></button>
+    <button type="button" data-a="calm" aria-pressed="false"><span class="he" lang="he">בלי אנימציות</span><span class="en" lang="en">No animation</span><span class="ru" lang="ru">Без анимации</span><span class="ar" lang="ar">بلا حركة</span></button>
+    <a href="accessibility.html" style="padding:6px 12px"><span class="he" lang="he">הצהרת נגישות</span><span class="en" lang="en">Accessibility statement</span><span class="ru" lang="ru">Заявление о доступности</span><span class="ar" lang="ar">بيان إتاحة الوصول</span></a>
   </div>
-  <button class="t" type="button" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Accessibility menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5h14M12 8.5v5M9 21l3-7.5L15 21"/></svg></button>
+  <button class="t" type="button" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Accessibility menu" data-aria='{"he": "תפריט נגישות", "en": "Accessibility menu", "ru": "Меню доступности", "ar": "قائمة إتاحة الوصول"}'><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5h14M12 8.5v5M9 21l3-7.5L15 21"/></svg></button>
 </div>
 
 <script>
@@ -248,13 +248,19 @@ html.calm *{animation:none!important;transition:none!important}html.calm .reveal
 
   // Language: the visitor's choice, else the browser's.
   var saved = null; try { saved = localStorage.getItem('hf-lang'); } catch (e) {}
+  var LANGS = ['he', 'en', 'ru', 'ar'];
   function setLang(l) {
+    if (LANGS.indexOf(l) < 0) l = 'he';
     root.classList.toggle('is-en', l === 'en');
-    root.lang = l; root.dir = l === 'en' ? 'ltr' : 'rtl';
+    root.lang = l; root.dir = l === 'he' || l === 'ar' ? 'rtl' : 'ltr';
+    var sel = document.getElementById('lang'); if (sel && sel.value !== l) sel.value = l;
+    document.querySelectorAll('[data-aria]').forEach(function (e) { try { var m = JSON.parse(e.getAttribute('data-aria')); if (m[l]) e.setAttribute('aria-label', m[l]); } catch (x) {} });
     try { localStorage.setItem('hf-lang', l); } catch (e) {}
   }
-  setLang(saved || ((navigator.language || 'he').slice(0, 2) === 'he' ? 'he' : 'en'));
-  document.getElementById('lang').addEventListener('click', function () { setLang(root.classList.contains('is-en') ? 'he' : 'en'); });
+  var nav = (navigator.language || 'he').slice(0, 2);
+  setLang(LANGS.indexOf(typeof asked === 'string' ? asked : '') >= 0 ? asked : saved || (LANGS.indexOf(nav) >= 0 ? nav : 'en'));
+  var lb = document.getElementById('lang');
+  if (lb) lb.addEventListener('change', function () { setLang(lb.value); });
 
   // Windows of the skyline, lit at random.
   var wins = document.getElementById('wins');

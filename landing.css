@@ -2,7 +2,7 @@
 :root{--blue:#2F63F0;--violet:#5B3FE0;--navy:#0E1530;--navy2:#1B2A6B;--ink:#161B26;--muted:#5B6475;--line:#E3E7EF;--soft:#F4F6FB;--amber:#FFB547;--green:#20C997;--card:#fff;--radius:20px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font:17px/1.65 system-ui,-apple-system,"Segoe UI",Heebo,Arial,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
-html:not(.is-en) .en{display:none!important}html.is-en .he{display:none!important}
+html:not([lang=he]) .he,html:not([lang=en]) .en,html:not([lang=ru]) .ru,html:not([lang=ar]) .ar{display:none!important}html[lang=ar] body{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Arabic","Geeza Pro",Tahoma,Arial,sans-serif}select.lang{appearance:none;-webkit-appearance:none}select.lang option{color:#161B26;background:#fff}
 a{color:inherit}img,svg,video{max-width:100%}
 .wrap{width:min(1120px,92vw);margin-inline:auto}
 h1,h2,h3{line-height:1.2;margin:0;text-wrap:balance}
