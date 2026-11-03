@@ -1,0 +1,6 @@
+# bayito.app: every page may be listed by search engines. sitemap.xml is written on every publish (scripts/sitemap.mjs).
+# Cloudflare adds its own block of content signals above these lines (Managed robots.txt).
+User-agent: *
+Allow: /
+
+Sitemap: https://bayito.app/sitemap.xml
